@@ -1,5 +1,5 @@
 import React from "react";
-import { TOTAL_SCREENS } from "../Utilities/commonUtils";
+import { TOTAL_SCREENS } from "../Utilities/CommonUtils";
 
 export default function PortfolioContainer() {
   const mapAllScreens = () => {
