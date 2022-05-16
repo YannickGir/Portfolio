@@ -4,7 +4,6 @@ import { Object } from "prop-types";
 
 export default class ScrollService {
   static ScrollHandler = new ScrollService();
-
   static currentScreenBroadCaster = new Subject();
   static currentScreenFadeIn = new Subject();
 
@@ -54,7 +53,7 @@ export default class ScrollService {
       if (fullyVisible || partiallyVisible) {
         if (partiallyVisible && !screen.alreadyRendered) {
           ScrollService.currentScreenFadeIn.next({
-            fadeInScreen: screen.screen_name,
+            /*to broadcast the fadeiInEffect*/ fadeInScreen: screen.screen_name,
           });
           screen["alreadyRendered"] = true;
           break;

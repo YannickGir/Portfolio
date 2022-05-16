@@ -7,15 +7,15 @@ import ScrollService from "../../../Utilities/ScrollService";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
-import { switchScan } from "rxjs";
+import { switchScreen } from "rxjs";
 
 export default function Header() {
   const [selectedScreen, setSelectedScreen] = useState(0);
   const [showHeaderOptions, setShowHeaderOptions] = useState(false);
 
   const updateCurrentScreen = (currentScreen) => {
-    if (!currentScreen || !currentScreen.screen.screenInView) return;
-    let screenIndex = GET_SCREEN_INDEX(currentScreen.ScreenInView);
+    if (!currentScreen || !currentScreen.screenInView) return;
+    let screenIndex = GET_SCREEN_INDEX(currentScreen.screenInView);
     if (screenIndex < 0) return;
   };
   let currentScreenSubscription =
@@ -53,7 +53,7 @@ export default function Header() {
   return (
     <div>
       <div
-        className="header-option"
+        className="header-container"
         onClick={() => setShowHeaderOptions(!showHeaderOptions)}
       >
         <div className="header-parent">
@@ -61,11 +61,7 @@ export default function Header() {
             className="header-hamburger"
             onClick={() => setShowHeaderOptions(!showHeaderOptions)}
           >
-            {" "}
-            <FontAwesomeIcon
-              className="header-hamburger-bars"
-              icon={faBars}
-            />{" "}
+            <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
           </div>
         </div>
         <div className="header-logo">
