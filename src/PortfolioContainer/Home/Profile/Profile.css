@@ -22,14 +22,14 @@
   margin: 14px 0 24px 0;
 }
 .profile-details-role h1 {
-  font-size: 28px;
-  font-family: cursive;
+  font-size: 40px;
+  font-family: "cursive";
 }
 .primary-text {
   color: (--white);
 }
 .highlighted-text {
-  color: var(--dark-orange);
+  color: #ff5823;
 }
 .profile-role-tagLine {
   font-size: 19px;
@@ -39,6 +39,7 @@
 
 .profile-options .highlighted-btn {
   margin: 0 0 0 28px;
+  border-radius: 12px solid white;
 }
 
 .profile-options .highlighted-btn:hover {
