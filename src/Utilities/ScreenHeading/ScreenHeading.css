@@ -29,14 +29,14 @@
   height: 2px;
   background-color: #1f2235;
 }
-.seperetor-blob {
+.seperator-blob {
   height: 10px;
   width: 100%;
   position: absolute;
   display: flex;
   justify-content: center;
 }
-.seperetor-blob div {
+.seperator-blob div {
   width: 35px;
   border-radius: 10px;
   background-color: var(--dark-orange);

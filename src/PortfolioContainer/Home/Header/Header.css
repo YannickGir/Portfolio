@@ -30,7 +30,7 @@
 }
 
 .header-hamburger {
-  /* display: none; */
+  display: none;
   color: var(--white);
 }
 
@@ -40,11 +40,11 @@
 }
 
 .selected-header-option {
-  color: #ff5823;
+  color: var(--dark-orange);
 }
 
 /*IPADPRO*/
-@media only screen and (max-xidth: 1110px) {
+@media only screen and (max-width: 1110px) {
   .header-parent {
     width: 80%;
   }
@@ -79,6 +79,7 @@
   .selected-header-option {
     color: var(--white);
   }
+
   .header-hamburger-bars {
     font-size: 30px;
     cursor: pointer;
