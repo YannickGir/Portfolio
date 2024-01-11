@@ -13,7 +13,7 @@ export default function AboutMe(props) {
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
   const SCREEN_CONSTANTS = {
-    description: "Développeur full stack web et mobile etc",
+    description: "Développeur full stack web et mobile",
     highlights: {
       bullets: [
         "Développeur full stack web et mobile",
@@ -21,7 +21,7 @@ export default function AboutMe(props) {
         "Tests",
         "Méthode Scrum / Agile",
       ],
-      heading: "Ici quelques compétences :",
+      heading: "Compétences principales :",
     },
   };
 
