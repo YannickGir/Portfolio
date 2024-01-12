@@ -1,4 +1,4 @@
-import { TOTAL_SCREENS } from "./CommonUtils";
+import { TOTAL_SCREENS } from "./commonUtils2";
 import { Subject } from "rxjs";
 import { Object } from "prop-types";
 
@@ -21,7 +21,7 @@ export default class ScrollService {
     homeMeScreen.scrollIntoView({ behavior: "smooth" });
   };
   isElementInView = (elem, type) => {
-    let rec = elem.getBoundingClientReact();
+    let rec = elem.getBoundingClientRect();
     let elementTop = rec.top;
     let elementBottom = rec.Bottom;
 
@@ -42,7 +42,8 @@ export default class ScrollService {
   };
 
   checkCurrentScreenUnderViewport = (event) => {
-    if (!event || Object.keys(event).length < 1) return;
+    if (!event) return;
+
     for (let screen of TOTAL_SCREENS) {
       let screenFromDOM = document.getElementById(screen.screen_name);
       if (!screenFromDOM) continue;

@@ -4,6 +4,12 @@ import ScrollService from "../../Utilities/ScrollService";
 import Animations from "../../Utilities/Animations";
 import "./Resume.css";
 
+import educationLogo from "../../assets/Resume/education.svg";
+import workHistoryLogo from "../../assets/Resume/work-history.svg";
+import programmingSkillsLogo from "../../assets/Resume/programming-skills.svg";
+import projectsLogo from "../../assets/Resume/projects.svg";
+import interestsLogo from "../../assets/Resume/interests.svg";
+
 export default function Resume(props) {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffSetStyle, setCarousalOffSetStyle] = useState({});
@@ -14,6 +20,8 @@ export default function Resume(props) {
   };
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+
+
 
   const ResumeHeading = (props) => {
     return (
@@ -41,14 +49,14 @@ export default function Resume(props) {
   };
 
   const resumeBullets = [
-    { label: "Education", logoSrc: "education.svg" },
-    { label: "Historique professionnel", logoSrc: "work-history.svg" },
+    { label: "Education", logoSrc: educationLogo },
+    { label: "Historique professionnel", logoSrc: workHistoryLogo },
     {
       label: "Compétences en programmation",
-      logoSrc: "programming-skills.svg",
+      logoSrc: programmingSkillsLogo,
     },
-    { label: "Projets", logoSrc: "projects.svg" },
-    { label: "Intérêts", logoSrc: "interests.svg" },
+    { label: "Projets", logoSrc: projectsLogo },
+    { label: "Intérêts", logoSrc: interestsLogo },
   ];
 
   const programmingSkillDetails = [
@@ -191,7 +199,8 @@ export default function Resume(props) {
     setSelectedBulletIndex(index);
   };
   const getBullets = () => {
-    return resumeBullets.map((bullet, index) => (
+    return resumeBullets.map((bullet, index) => 
+    (
       <div
         onClick={() => handleCarousal(index)}
         className={
@@ -201,7 +210,7 @@ export default function Resume(props) {
       >
         <img
           className="bullet-logo"
-          src={require(`../../assets/Resume/${bullet.logoSrc}`).default}
+          src={bullet.logoSrc}
           alt="Désolé, aucune connexion internet"
         />
         <span className="bullet-label">{bullet.label}</span>
